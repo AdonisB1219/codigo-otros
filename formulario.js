@@ -7,9 +7,9 @@
 //Cambié el selector de id por uno de la etiqueta
 var formulario = document.querySelector("form")
 
-formulario.onsubmit = function(e) {
+formulario.onsubmit = function(evento) {
 //No estaba bien escrito, cambié "default" por "preventDefault"
-  e.preventDefault();
+  evento.preventDefault();
   
   var n = formulario.elements[0]
   var e = formulario.elements[1]
@@ -40,16 +40,8 @@ if (nombre.length > 0
 
 }
 
-//Hice una función para crear el botón para borrar y eliminé el código anterior del botón que no se usaba
-function crearBoton(elementoLista){
-  var botonBorrar = document.createElement("button")
-botonBorrar.textContent = "Eliminar invitado"
-botonBorrar.id = "boton-borrar"
-var corteLinea = document.createElement("br")
-elementoLista.appendChild(corteLinea)
-elementoLista.appendChild(botonBorrar);
-return botonBorrar;
-}
+//Eliminé el código anterior del botón que no se usaba
+
 
 //Saqué esta función de la función agregarInvitado
 function crearElemento(descripcion, valor, elementoLista) {
@@ -92,8 +84,12 @@ crearElemento("Nombre", nombre, elementoLista)
 crearElemento("Edad", edad, elementoLista)
 crearElemento("Nacionalidad", nacionalidad, elementoLista)
 
-//Puse el código de aquí en una función
-botonBorrar = crearBoton(elementoLista)
+var botonBorrar = document.createElement("button")
+botonBorrar.textContent = "Eliminar invitado"
+botonBorrar.id = "boton-borrar"
+var corteLinea = document.createElement("br")
+elementoLista.appendChild(corteLinea)
+elementoLista.appendChild(botonBorrar);
 
  botonBorrar.onclick = function() {
 // this.parentNode.style.display = 'none';
