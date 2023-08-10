@@ -9,16 +9,20 @@
   <title>Formulario</title>
 </head>
 <body>
+  <!--Hice un contenedor main y un div para centrar-->
+  <main>
+    <div class="contenedor">
   <h1>Bienvenidos a mi fiesta</h1>
   <h2>Por favor, confirmar asistencia:</h2>
 
   <form class="formulario">
-    Nombre <input type="text" name="name" id="name">
+    <!--Le puse etiquetas de párrafo para mejorar la letra-->
+    <p>Nombre</p> <input type="text" name="name" id="name">
     <br />
-    Edad <input type="number" name="age" id="age">
+    <p>Edad</p> <input type="number" name="age" id="age">
     <br />
 
-    Nacionalidad
+    <p>Nacionalidad</p>
     <select name="nationality" id="nationality">
       <option value="ar">Argentina</option>
       <option value="mx">Mexicana</option>
@@ -31,10 +35,13 @@
 <!--Agregé el id lista-de-invitados-->
   <div id="lista-de-invitados">
     <h2>Lista de invitados</h2>
-
+    <div id="invitados"></div>
   </div>
+</div>
 
-  <script src="../formulario.js"></script>
+</main>
+
+  <script src="./formulario.js"></script>
 </body>
 
 </html>

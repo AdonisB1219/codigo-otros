@@ -11,10 +11,18 @@ body {
   width: 400px;
 }
 
+/* Para centrar contenido */
+main{
+  display: flex;
+  justify-content: center;
+}
+
+/* Tamaño de letra más grande */
 .formulario input, select {
   border: none;
-  height: 20px;
   border-radius: 5px;
+  font-size: 20px;
+  height: 30px;
 }
 
 .error {
@@ -39,4 +47,22 @@ body {
   font-family: Verdana;
   margin: 10px 0;
   font-size: 16px;
+}
+
+/* Para centrar contenido */
+.contenedor{
+  text-align: center;
+}
+
+/* Para letra más legible */
+p{
+  font-size: 20px;
+  text-align: start;
+  margin-bottom: 0px;
+  font-weight: 600;
+}
+
+/* Para alinear contenido */
+#invitados{
+  text-align: start;
 }

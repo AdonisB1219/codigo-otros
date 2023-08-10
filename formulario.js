@@ -70,7 +70,7 @@ function agregarInvitado(nombre, edad, nacionalidad) {
     nacionalidad = "Peruana"
   }
 
-var lista = document.getElementById("lista-de-invitados")
+var lista = document.getElementById("invitados")
 
 var elementoLista = document.createElement("div")
 //Cambié el método addClass por add
